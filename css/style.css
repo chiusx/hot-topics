@@ -1,0 +1,197 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Cormorant:300,regular,500,600,700,300italic,italic,500italic,600italic,700italic);
+
+/* General Styles */
+:root {
+    --col1: #f0f0f0;
+    --col2: #0921aa;
+    --col3: #2172ff;
+    --col4: #0056c0;
+
+    --fontB: "Poppins", sans-serif;
+    --fontH: "Cormorant", serif;
+}
+
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fontB);
+    line-height: 1.6;
+    color: var(--col2);
+}
+
+
+/* Style the navbar container */
+.navbar {
+    width: 100%;
+    padding: 2rem;
+    font-size: 1rem;
+    background-color: var(--col4);
+}
+
+/* Style the unordered list within the navbar */
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    text-align: left;
+}
+
+.navbar a {
+    font-size: 1rem;
+    text-decoration: none;
+    display: block;
+    color: var(--col1);
+    margin-bottom: 1rem;
+}
+
+.masthead {
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--col2);
+    padding: 2rem;
+    text-align: left;
+}
+
+.masthead h1 {
+    font-family: var(--fontH);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+
+/* Style dynamic main content */
+main {
+    padding: 2rem;
+    text-align: left;
+    background-color: var(--col1);
+}
+
+#dynamic-content h1 {
+    font-family: var(--fontH);
+    font-weight: 700;
+    text-decoration: underline;
+    margin-bottom: 2rem;
+}
+
+#dynamic-content img {
+    width: 100%;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+}
+
+#dynamic-content p {
+    margin-bottom: 2rem;
+}
+
+/* Style for the buttons */
+#trigger-buttons {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+#trigger-buttons button {
+    font-family: var(--fontB);
+    background-color: var(--col2);
+    color: var(--col1);
+    border: 1.5px solid var(--col2);
+    margin-right: .5rem;
+    margin-bottom: .5rem;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* Style for the buttons on hover */
+#trigger-buttons button:hover {
+    background-color: var(--col1);
+    border: 1.5px solid var(--col2);
+    color: var(--col2);
+}
+
+
+footer {
+    text-align: left;
+    padding: 2rem;
+    background-color: var(--col4);
+}
+
+footer ul {
+    list-style-type: none;
+    text-align: left;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+footer a,
+footer p {
+    color: var(--col1);
+}
+
+footer a {
+    font-size: 1.5rem;
+}
+
+
+
+/* Styles for Tablet/Desktop View between 30rem and 60rem */
+@media (min-width: 30rem) {
+    body {
+        max-width: 60rem;
+        margin: auto;
+    }
+
+    .masthead {
+        padding: 5rem 2rem;
+    }
+
+
+    /* Horizontally align nav-bar items */
+    .navbar li {
+        float: left;
+        margin-right: 2.2rem;
+        font-size: 1.25rem;
+    }
+
+    .navbar ul {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .navbar a {
+        margin-bottom: 0;
+        margin-right: 1.5rem;
+    }
+
+
+    /* Dynamic content styling */
+    #dynamic-content img {
+        width: 25%;
+        float: left;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    #dynamic-content p {
+        clear: right;
+    }
+
+    #trigger-buttons button {
+        margin-bottom: 0;
+    }
+}
